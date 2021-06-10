@@ -1,0 +1,97 @@
+.header {
+    height: 90vh;
+    padding: 5rem 2rem;
+
+    @include tablet {
+        height: 100vh;
+    }
+
+    &-main {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        &__text {
+            width: 480px;
+
+            @include tablet {
+                width: 90%;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+                font-weight: $font-bold;
+                color: $color-dark-blue;
+                margin-bottom: 2rem;
+
+                @include tablet {
+                    font-size: 2.5rem;
+                }
+
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            .btn-primary {
+                margin-right: 1.5rem;
+
+                @include mobile {
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+
+        &__img {
+            height: 400px;
+            margin-right: -100px;
+            position: relative;
+
+            @include tablet {
+                margin-right: 0;
+                margin-bottom: 5rem;
+                margin-top: 5rem;
+                height: 300px;
+            }
+
+            @include mobile {
+                height: 259px;
+            }
+
+            img {
+                height: 100%;
+            }
+
+            .img-bg {
+                position: absolute;
+                top: 35%;
+                left: 20%;
+                z-index: -1;
+                background-color: $color-primary;
+                width: 200%;
+                height: 300px;
+                border-radius: 1px 1px 1px 200px;
+
+                @include tablet {
+                    height: 200px;
+                }
+
+                @include mobile {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}

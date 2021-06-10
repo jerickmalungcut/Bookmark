@@ -1,0 +1,24 @@
+//Font
+$font-main: 'Rubik', sans-serif;
+$font-regular: 400;
+$font-bold: 500;
+$font-default-size: 10px;
+
+//Mixin
+$desktop-big: 1440px;
+$desktop-small: 1140px;
+$tablet: 900px;
+$mobile: 575px;
+
+//Colors
+$color-primary: hsl(231, 69%, 60%);
+$color-secondary: hsl(0, 94%, 66%);
+$color-grey-blue: hsl(229, 8%, 60%);
+$color-dark-blue: hsl(229, 31%, 21%);
+$color-grey-light: #f7f7f7;
+$color-white: #fff;
+$color-black: #333;
+$color-grey: #ddd;
+
+//Box shadow
+$box-shadow:  -5px 12px 31px -8px rgba($color-primary,0.2);

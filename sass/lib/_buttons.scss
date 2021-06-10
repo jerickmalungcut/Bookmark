@@ -1,0 +1,48 @@
+.btn {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: $font-bold;
+    padding: 1.4rem 3.3rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .3s;
+    box-shadow: $box-shadow;
+
+    @include tablet {
+        font-size: 1.1rem;
+        padding: 1.1rem 2.5rem;
+    }
+
+    &:hover {
+        background-color: $color-white !important;
+    }
+}
+
+.btn-secondary {
+    background-color: $color-secondary;
+    color: $color-white !important;
+
+    &:hover {
+        border: 2px solid $color-secondary;
+        color: $color-secondary !important;
+    }
+}
+
+.btn-primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+        border: 2px solid $color-primary;
+        color: $color-primary;
+    }
+}
+
+.btn-tertiary {
+    background-color: $color-grey-light;
+    color: $color-dark-blue;
+
+    &:hover {
+        border: 2px solid $color-dark-blue;
+    }
+}

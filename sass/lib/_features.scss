@@ -1,0 +1,136 @@
+.features {
+    padding: 2rem 2rem 8rem;
+    height: 80vh;
+
+    @include tablet {
+        height: initial;
+        padding: 5rem 2rem 2rem;
+    }
+
+    > p {
+        margin-bottom: 6rem;
+    }
+
+    &-tab {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 73rem;
+        margin: 0 auto 3rem;
+        border-bottom: 2px solid $color-grey-light;
+
+        @include tablet {
+            flex-direction: column;
+            border-bottom: 2px solid transparent;
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            display: inline-block;
+            width: 24.3rem;
+            color: $color-grey-blue;
+            font-weight: $font-regular;
+            transition: all .3s;
+            cursor: pointer;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid transparent;
+
+            @include tablet {
+                border-bottom: 2px solid $color-grey-light;
+                display: block;
+                width: 100%;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            &:hover {
+                color: $color-secondary;
+            }
+
+            &.active {
+                color: $color-dark-blue;
+                border-bottom: 2px solid $color-secondary;
+            }
+        }
+    }
+
+    &-tabs {
+        display: none;
+        align-items: center; 
+        padding: 3rem 0;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        &.active {
+            display: flex;
+        }
+
+        &__img {
+            position: relative;
+            height: 345px;
+
+            @include tablet {
+                height: 245px;
+            }
+
+            @include mobile {
+                height: 200px;
+            }
+
+            img {
+                height: 100%;
+            }
+
+            .img-bg {
+                position: absolute;
+                top: 35%;
+                right: 20%;
+                z-index: -1;
+                background-color: $color-primary;
+                width: 200%;
+                height: 300px;
+                border-radius: 1px 1px 200px 1px;
+
+                @include tablet {
+                    height: 200px;
+                }
+
+                @include mobile {
+                    height: 150px;
+                }
+            }
+        }
+
+        &__text {
+            padding: 4rem;
+
+            @include tablet {
+                margin-top: 6rem;
+                text-align: center;
+            }
+
+            @include mobile {
+                margin-top: 4rem;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                font-weight: $font-bold;
+                color: $color-dark-blue;
+                margin-bottom: 2rem;
+
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

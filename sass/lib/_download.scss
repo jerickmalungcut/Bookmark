@@ -1,0 +1,85 @@
+.download {
+    padding: 7rem 0;
+
+    @include tablet {
+        padding: 4rem 2rem;
+    }
+
+    &-cards {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-card {
+        width: 280px;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $box-shadow;
+
+        @include mobile {
+            width: 230px;
+            height: 300px;
+            margin-bottom: 3rem;
+        }
+
+        .browser {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 3.5rem;
+
+            @include tablet {
+                height: 80px;
+                width: 80px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            font-weight: $font-bold;
+            color: $color-dark-blue;
+            text-align: center;
+            margin-bottom: 1.6rem;
+        }
+
+        h6 {
+            font-size: 1.2rem;
+            font-weight: $font-regular;
+            color: $color-grey-blue;
+            margin-bottom: 3.5rem;
+
+            @include tablet {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .dots {
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+    }
+
+    &-card:nth-child(2) {
+        margin: 5rem 2rem 0;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &-card:nth-child(3) {
+        margin-top: 10rem;
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}

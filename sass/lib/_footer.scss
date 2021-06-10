@@ -1,0 +1,181 @@
+.footer {
+
+    &-main {
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 7rem 2rem;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        h6 {
+            color: $color-white;
+            font-size: 1rem;
+            font-weight: $font-regular;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        h3 {
+            color: $color-white;
+            font-size: 2.4rem;
+            font-weight: $font-regular;
+            margin-bottom: 3rem;
+            text-align: center;
+
+            @include tablet {
+                font-size: 2rem;
+            }
+        }
+
+        .form {
+            display: flex;
+
+            @include tablet {
+                flex-direction: column;
+            }
+            
+            input {
+                font-size: 1.4rem;
+                width: 300px;
+                padding: 1.6rem;
+                margin-right: 1.6rem;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+
+                @include tablet {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+
+                &::placeholder {
+                    font-size: 1.4rem;
+                    color: $color-grey-blue;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+
+            @include tablet {
+                text-align: center;
+                justify-content: center;
+                padding: 1.6rem ;
+            }
+        }
+    }
+
+    &-nav {
+        background-color: $color-dark-blue;
+        padding: 3rem 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+
+        &__icons {
+
+            @include tablet {
+                margin-top: 2rem;
+            }
+
+
+            a {
+                display: inline-block;
+                
+                width: 25px;
+                height: 25px;
+                transition: all .3s;
+
+                @include mobile {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                    color: $color-secondary;
+                }
+            }
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .logo {
+                margin-right: 6rem;
+
+                @include tablet {
+                    margin-right: 3rem;
+                }
+
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .nav-link {
+                font-size: 1.3rem;
+                color: $color-white;
+                margin-right: 4rem;
+                text-transform: uppercase;
+                transition: color .3s;
+
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }   
+        }
+    }
+
+    &-sub {
+        text-align: center;
+        padding: 2rem;
+
+        h6, a {
+            font-weight: $font-regular;
+            font-size: 1.2rem;
+            color: $color-grey-blue;
+        }
+    }
+}
